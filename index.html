@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Lengkap -->
+    <title>VisualGear | Rental Kamera & Alat Fotografi Pro Jakarta Barat</title>
+    <meta name="description" content="VisualGear Rental Kamera Jakarta Barat. Sewa kamera Mirrorless, DSLR, Action Cam, dan peralatan videografi terlengkap, termurah, dan terpercaya. Pilihan pro untuk karya epic!">
+    <meta name="keywords" content="rental kamera jakarta barat, sewa kamera mirrorless, sewa lensa, rental lighting, sewa perlengkapan podcast, visualgear, rental kamera murah, sewa gimbal">
+    <meta name="author" content="VisualGear">
+    <link rel="icon" type="image/webp" href="gambarasset/favicon.ico">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="VisualGear | Rental Kamera & Alat Fotografi Pro Jakarta Barat">
+    <meta property="og:description" content="Sewa perlengkapan visual terbaik untuk project Anda. Harga terjangkau, kualitas pro. Cek katalog kami sekarang!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.visualgear.com">
+    <meta property="og:image" content="https://placehold.co/1200x630/FFD166/000000?text=VisualGear+Rental+Kamera">
+
+    <!-- Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) untuk perpaduan Modern, Clean & Energik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        comic: {
+                            yellow: '#FFD166',
+                            cyan: '#06D6A0',
+                            pink: '#EF476F',
+                            blue: '#118AB2',
+                            dark: '#073B4C'
+                        }
+                    },
+                    boxShadow: {
+                        'comic': '6px 6px 0px 0px rgba(0,0,0,1)',
+                        'comic-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+                        'comic-lg': '10px 10px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Pattern background khas komik (Halftone / Polkadot) */
+        .bg-polkadot {
+            background-color: #ffffff;
+            background-image: radial-gradient(#000000 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.95;
+        }
+        
+        .comic-border {
+            border: 3px solid #000;
+        }
+
+        .btn-comic {
+            transition: all 0.2s ease;
+        }
+        
+        .btn-comic:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,1) !important;
+        }
+
+        .btn-comic:active {
+            transform: translate(6px, 6px);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1) !important;
+        }
+
+        /* Speech Bubble Tail for Testimonials */
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 30px;
+            border-width: 20px 20px 0;
+            border-style: solid;
+            border-color: #000 transparent transparent transparent;
+            display: block;
+            width: 0;
+        }
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -16px;
+            left: 33px;
+            border-width: 16px 16px 0;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+            display: block;
+            width: 0;
+            z-index: 10;
+        }
+
+        /* Animasi Hentak Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Animasi Buka-Tutup FAQ */
+        .faq-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+        .faq-content.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-white border-b-[10px] border-black">
+        <!-- Garis kuning di atas garis hitam -->
+        <div class="absolute bottom-0 left-0 w-full h-[4px] bg-comic-yellow"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#">
+                        <img class="h-12 w-auto object-contain" src="gambarasset/logo.webp" alt="VisualGear Logo">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center font-heading font-bold text-lg">
+                    <a href="#profil" class="text-black hover:text-comic-pink transition-colors">Tentang Kami</a>
+                    <a href="#katalog-kamera" class="text-black hover:text-comic-blue transition-colors">Katalog</a>
+                    <a href="#paket" class="text-black hover:text-comic-cyan transition-colors">Paket Sewa</a>
+                    <a href="#testimoni" class="text-black hover:text-comic-yellow transition-colors">Testimoni</a>
+                    <a href="https://wa.me/6289529605601" target="_blank" class="bg-comic-yellow comic-border shadow-comic btn-comic px-6 py-2 rounded-full font-bold">
+                        <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Booking WA
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-black p-2 comic-border shadow-comic bg-comic-yellow rounded-lg btn-comic">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white comic-border border-t-4 border-black">
+            <div class="px-4 pt-2 pb-6 space-y-2 font-heading font-bold text-center flex flex-col">
+                <a href="#profil" class="block px-3 py-3 rounded-md bg-gray-100 comic-border mt-2">Tentang Kami</a>
+                <a href="#katalog-kamera" class="block px-3 py-3 rounded-md bg-gray-100 comic-border">Katalog Kamera</a>
+                <a href="#paket" class="block px-3 py-3 rounded-md bg-gray-100 comic-border">Paket Sewa</a>
+                <a href="#testimoni" class="block px-3 py-3 rounded-md bg-gray-100 comic-border">Testimoni</a>
+                <a href="https://wa.me/6289529605601" class="block px-3 py-3 rounded-md bg-comic-yellow comic-border mt-4 text-black text-lg">
+                    <i class="fa-brands fa-whatsapp"></i> Chat Admin Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-polkadot border-b-4 comic-border border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Hero Copywriting -->
+                <div class="space-y-8">
+                    <div class="inline-block bg-comic-pink text-white font-bold px-4 py-2 rounded-full comic-border shadow-comic transform -rotate-2 reveal">
+                        🔥 #1 Rental Kamera di Jakarta Barat
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-heading font-black leading-normal text-black tracking-tight reveal relative z-20 pb-4">
+                        BIKIN KARYA <span class="bg-comic-yellow px-3 py-1 inline-block border-[3px] border-black shadow-comic-hover transform -rotate-2 mx-1 mt-2 mb-2 relative z-30">EPIC</span> TANPA BIKIN DOMPET MENJERIT! 💥
+                    </h1>
+                    <div class="bg-white border-4 border-black p-5 rounded-2xl shadow-comic inline-block reveal">
+                        <p class="text-xl text-gray-800 font-medium leading-relaxed m-0">
+                            Dari kamera mirrorless canggih, lensa G-Master, hingga drone DJI. Semua ready stock untuk project masterpiece-mu selanjutnya. Sewa gampang, syarat anti ribet.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4 reveal">
+                        <a href="#katalog-kamera" class="bg-black text-white text-center font-heading font-bold text-xl px-8 py-4 rounded-xl comic-border shadow-comic btn-comic hover:text-comic-yellow">
+                            Lihat Katalog
+                        </a>
+                        <a href="https://wa.me/6289529605601" target="_blank" class="bg-comic-cyan text-black text-center font-heading font-bold text-xl px-8 py-4 rounded-xl comic-border shadow-comic btn-comic">
+                            <i class="fa-brands fa-whatsapp"></i> Konsultasi Alat
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Images (Comic Style Layout) -->
+                <div class="relative hidden lg:block h-[500px] reveal">
+                    <div class="absolute top-0 right-0 w-3/4 h-64 bg-comic-blue rounded-3xl comic-border shadow-comic transform rotate-3"></div>
+                    <img src="gambarasset/hero.webp" alt="Kamera DSLR" class="absolute top-8 right-8 w-3/4 rounded-3xl comic-border shadow-comic-lg transform -rotate-3 object-cover hover:rotate-0 transition-transform duration-300">
+                    
+                    <div class="absolute bottom-10 left-0 bg-white comic-border shadow-comic-lg rounded-2xl p-4 transform rotate-6 z-20 flex items-center gap-4">
+                        <div class="bg-comic-yellow w-12 h-12 rounded-full flex items-center justify-center comic-border">
+                            <i class="fa-solid fa-star text-black text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-heading font-bold text-lg">Peralatan Terawat</p>
+                            <p class="text-sm font-medium">Lensa selalu bersih & no fog!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profil" class="py-20 bg-white border-b-4 comic-border border-black relative">
+        <!-- Floating badge -->
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white font-heading font-bold text-2xl px-8 py-2 rounded-full comic-border shadow-comic">
+            SIAPA VISUALGEAR? 🕵️‍♂️
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-black mb-6">Partner Setia Para Kreator Visual</h2>
+                <p class="text-lg text-gray-600 font-medium leading-relaxed">
+                    VisualGear hadir di Jakarta Barat dengan satu misi: <strong class="text-black bg-comic-yellow px-1">Membuat produksi visual kelas pro bisa diakses oleh siapa saja.</strong> Kami paham bahwa ide brilian butuh alat yang mumpuni. Kami menyediakan peralatan yang selalu diservis berkala, bersih, dan siap syuting kapanpun.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-comic-cyan p-8 rounded-2xl comic-border shadow-comic text-center transform hover:-translate-y-2 transition-transform reveal">
+                    <div class="bg-white w-20 h-20 mx-auto rounded-full comic-border flex items-center justify-center mb-6 shadow-comic">
+                        <i class="fa-solid fa-camera-rotate text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-3">Unit Selalu Prima</h3>
+                    <p class="font-medium text-black">Setiap kamera dan lensa dicek ketat sebelum dan sesudah disewa. Sensor bersih, lensa tajam!</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-comic-pink p-8 rounded-2xl comic-border shadow-comic text-center transform hover:-translate-y-2 transition-transform reveal">
+                    <div class="bg-white w-20 h-20 mx-auto rounded-full comic-border flex items-center justify-center mb-6 shadow-comic">
+                        <i class="fa-solid fa-money-bill-wave text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-3">Harga Bersahabat</h3>
+                    <p class="font-medium text-black text-white">Tarif sewa kompetitif untuk mahasiswa, freelancer, hingga production house besar.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-comic-blue p-8 rounded-2xl comic-border shadow-comic text-center transform hover:-translate-y-2 transition-transform reveal">
+                    <div class="bg-white w-20 h-20 mx-auto rounded-full comic-border flex items-center justify-center mb-6 shadow-comic">
+                        <i class="fa-solid fa-bolt text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-3 text-white">Proses Cepat & Mudah</h3>
+                    <p class="font-medium text-white">Syarat fleksibel tanpa bikin pusing. Booking online cepat, langsung pick-up atau dikirim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="katalog-kamera" class="py-24 bg-gray-100 border-b-4 comic-border border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-heading font-black text-black">KATALOG KAMERA 📸</h2>
+                    <p class="text-xl font-medium mt-4 text-gray-700">Senjata utama untuk hasil jepretan dan video paripurna.</p>
+                </div>
+                <a href="https://wa.me/6289529605601" class="hidden md:inline-block bg-black text-white font-bold py-3 px-6 rounded-xl comic-border shadow-comic btn-comic mt-6 md:mt-0">
+                    Cek Ketersediaan
+                </a>
+            </div>
+
+            <!-- 5 Slot Grid: 3 top, 2 bottom centered using Flex/Grid combo -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Mirrorless -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-yellow transition-colors reveal">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
+                        <img src="gambarasset/kamera1.webp" alt="Kamera Mirrorless" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-2">Mirrorless Pro</h3>
+                    <p class="text-sm font-medium text-gray-600 mb-4 group-hover:text-black">Keluarga Sony Alpha (A7S III, A7 IV), Lumix, dan Fujifilm. Auto-focus dewa, body ringan.</p>
+                    <p class="font-bold text-lg border-t-2 border-black pt-4">Mulai <span class="text-comic-pink group-hover:text-red-600">Rp 150.000</span> / hari</p>
+                </div>
+
+                <!-- 2. DSLR -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-cyan transition-colors reveal">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
+                        <img src="gambarasset/kamera2.webp" alt="Kamera DSLR" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-2">DSLR Powerhouse</h3>
+                    <p class="text-sm font-medium text-gray-600 mb-4 group-hover:text-black">Canon 5D Mark IV, Nikon D850. Pilihan klasik dengan baterai badak & ketangguhan teruji.</p>
+                    <p class="font-bold text-lg border-t-2 border-black pt-4">Mulai <span class="text-comic-pink group-hover:text-black">Rp 100.000</span> / hari</p>
+                </div>
+
+                <!-- 3. Action Camera -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-pink transition-colors text-black reveal">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
+                        <img src="gambarasset/kamera3.webp" alt="Action Camera" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-2 group-hover:text-white">Action & 360 Cam</h3>
+                    <p class="text-sm font-medium text-gray-600 mb-4 group-hover:text-white">GoPro Hero Series, Insta360. Rekam aksi ekstrem tanpa takut rusak. Tahan air & banting.</p>
+                    <p class="font-bold text-lg border-t-2 border-black pt-4 group-hover:text-white">Mulai <span class="text-black bg-comic-yellow px-1">Rp 75.000</span> / hari</p>
+                </div>
+            </div>
+
+            <!-- Bottom Row (2 Slots Centered) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+                <!-- 4. Video Camera -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-blue transition-colors reveal">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
+                        <img src="gambarasset/kamera4.webp" alt="Kamera Video Cinema" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-2 group-hover:text-white">Video & Cinema</h3>
+                    <p class="text-sm font-medium text-gray-600 mb-4 group-hover:text-white">Blackmagic Pocket Cinema, Sony FX series. Khusus untuk produksi film & komersial high-end.</p>
+                    <p class="font-bold text-lg border-t-2 border-black pt-4 group-hover:text-white">Mulai <span class="text-comic-pink">Rp 300.000</span> / hari</p>
+                </div>
+
+                <!-- 5. Kamera Lainnya (Drone/Analog) -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-black transition-colors reveal">
+                    <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
+                        <img src="gambarasset/kamera5.webp" alt="Drone dan Analog" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-2 group-hover:text-white">Drone & Kamera Spesifik</h3>
+                    <p class="text-sm font-medium text-gray-600 mb-4 group-hover:text-gray-300">DJI Mavic Series, Kamera Analog, Polaroid. Untuk sudut pandang & tone unik di projectmu.</p>
+                    <p class="font-bold text-lg border-t-2 border-black pt-4 group-hover:text-white">Mulai <span class="text-comic-yellow">Rp 200.000</span> / hari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="katalog-alat" class="py-24 bg-white border-b-4 comic-border border-black bg-polkadot relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 relative">
+                <span class="absolute -top-10 right-10 md:right-1/4 bg-comic-pink text-white font-heading font-bold py-2 px-4 rounded-lg transform rotate-12 comic-border shadow-comic">
+                    GEAR UP! 🚀
+                </span>
+                <h2 class="text-4xl md:text-6xl font-heading font-black text-black inline-block bg-white px-4 border-4 border-black shadow-comic">PERLENGKAPAN PRODUKSI</h2>
+                <p class="text-xl font-medium mt-6 text-gray-800 bg-white inline-block px-2">Kamera aja gak cukup. Lengkapi dengan armor pendukung.</p>
+            </div>
+
+            <!-- 4 Slot Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1. Lensa -->
+                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105 reveal">
+                    <div class="absolute top-0 right-0 bg-comic-yellow border-l-4 border-b-4 border-black p-2 font-bold z-10">#1</div>
+                    <img src="gambarasset/perlengkapan1.webp" alt="Lensa Kamera" class="w-full h-48 object-cover border-2 border-black rounded-lg mb-4">
+                    <h3 class="text-xl font-heading font-bold mb-1">Lensa (Lens)</h3>
+                    <p class="text-sm text-gray-700 font-medium mb-2">Prime, Zoom, Macro, Wide. Kaca bening, fokus cepat. (GM, L-Series, Art).</p>
+                </div>
+
+                <!-- 2. Tripod & Gimbal -->
+                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105 reveal">
+                    <div class="absolute top-0 right-0 bg-comic-cyan border-l-4 border-b-4 border-black p-2 font-bold z-10">#2</div>
+                    <img src="gambarasset/perlengkapan2.webp" alt="Gimbal dan Tripod" class="w-full h-48 object-cover border-2 border-black rounded-lg mb-4">
+                    <h3 class="text-xl font-heading font-bold mb-1">Stabilizer & Tripod</h3>
+                    <p class="text-sm text-gray-700 font-medium mb-2">DJI Ronin, Zhiyun Crane, Manfrotto. Bikin shot mulus anti goyang.</p>
+                </div>
+
+                <!-- 3. Lighting & Flash -->
+                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105 reveal">
+                    <div class="absolute top-0 right-0 bg-comic-pink text-white border-l-4 border-b-4 border-black p-2 font-bold z-10">#3</div>
+                    <img src="gambarasset/perlengkapan3.webp" alt="Lighting and Flash" class="w-full h-48 object-cover border-2 border-black rounded-lg mb-4">
+                    <h3 class="text-xl font-heading font-bold mb-1">Lighting & Flash</h3>
+                    <p class="text-sm text-gray-700 font-medium mb-2">Godox, Aputure, Softbox, RGB Light. Kendalikan cahaya, ciptakan mood.</p>
+                </div>
+
+                <!-- 4. Audio & Mic -->
+                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105 reveal">
+                    <div class="absolute top-0 right-0 bg-comic-blue text-white border-l-4 border-b-4 border-black p-2 font-bold z-10">#4</div>
+                    <img src="gambarasset/perlengkapan4.webp" alt="Microphone dan Audio" class="w-full h-48 object-cover border-2 border-black rounded-lg mb-4">
+                    <h3 class="text-xl font-heading font-bold mb-1">Audio & Mic</h3>
+                    <p class="text-sm text-gray-700 font-medium mb-2">Saramonic, Rode, Zoom Recorder. Visual bagus harus dibarengi audio jernih.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center reveal">
+                <a href="https://wa.me/6289529605601" class="inline-block bg-black text-white font-heading font-bold text-xl px-10 py-4 rounded-xl comic-border shadow-comic btn-comic hover:text-comic-cyan">
+                    <i class="fa-solid fa-list mr-2"></i> Minta Pricelist Lengkap PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="paket" class="py-24 bg-comic-dark text-white border-b-4 comic-border border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-heading font-black text-comic-yellow mb-4">PAKET RENTAL & DURASI ⏳</h2>
+                <p class="text-xl font-medium">Sewa sesuai kebutuhanmu. Lebih lama, diskon makin gila!</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Paket 12 Jam -->
+                <div class="bg-white text-black rounded-2xl comic-border shadow-comic-lg p-8 transition-transform duration-300 hover:-translate-y-3 reveal">
+                    <div class="bg-comic-blue text-white font-bold inline-block px-4 py-1 rounded-full text-sm mb-4 comic-border">Quicky</div>
+                    <h3 class="text-3xl font-heading font-black mb-2">12 Jam</h3>
+                    <p class="text-gray-600 font-medium mb-6">Cocok buat syuting kilat, event singkat, atau tugas kampus dadakan.</p>
+                    <ul class="space-y-3 mb-8 font-medium">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Pengambilan pagi/siang</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Pengembalian di hari yg sama</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Tarif standar 100%</li>
+                    </ul>
+                    <a href="https://wa.me/6289529605601" class="block w-full text-center bg-white comic-border border-2 font-bold py-3 rounded-xl hover:bg-gray-100 btn-comic">Pilih 12 Jam</a>
+                </div>
+
+                <!-- Paket 24 Jam (Highlight) -->
+                <div class="bg-comic-yellow text-black rounded-2xl comic-border shadow-comic-lg p-8 relative z-10 transition-transform duration-300 hover:-translate-y-3 reveal">
+                    <div class="absolute -top-4 -right-4 bg-comic-pink text-white font-bold py-1 px-3 rounded-lg comic-border transform rotate-6">MOST POPULAR!</div>
+                    <div class="bg-black text-white font-bold inline-block px-4 py-1 rounded-full text-sm mb-4 comic-border">Standard</div>
+                    <h3 class="text-3xl font-heading font-black mb-2">24 Jam</h3>
+                    <p class="text-gray-800 font-medium mb-6">Pilihan favorit! Waktu lebih lega buat backup data dan istirahat.</p>
+                    <ul class="space-y-3 mb-8 font-medium">
+                        <li><i class="fa-solid fa-check text-black mr-2"></i> Waktu produksi lebih santai</li>
+                        <li><i class="fa-solid fa-check text-black mr-2"></i> Gratis 1x memory card extra</li>
+                        <li><i class="fa-solid fa-check text-black mr-2"></i> Hitungan 1 hari full</li>
+                    </ul>
+                    <a href="https://wa.me/6289529605601" class="block w-full text-center bg-black text-white comic-border font-bold py-3 rounded-xl hover:text-comic-yellow btn-comic shadow-comic">Pilih 24 Jam</a>
+                </div>
+
+                <!-- Paket Mingguan -->
+                <div class="bg-white text-black rounded-2xl comic-border shadow-comic-lg p-8 transition-transform duration-300 hover:-translate-y-3 reveal">
+                    <div class="bg-comic-cyan text-black font-bold inline-block px-4 py-1 rounded-full text-sm mb-4 comic-border">Marathon</div>
+                    <h3 class="text-3xl font-heading font-black mb-2">Mingguan (7 Hari)</h3>
+                    <p class="text-gray-600 font-medium mb-6">Sewa 7 hari, bayar cuma 5 hari! Untuk short movie atau trip ke luar kota.</p>
+                    <ul class="space-y-3 mb-8 font-medium">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Diskon up to 30%</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Bebas bawa keluar kota</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Prioritas booking</li>
+                    </ul>
+                    <a href="https://wa.me/6289529605601" class="block w-full text-center bg-white comic-border border-2 font-bold py-3 rounded-xl hover:bg-gray-100 btn-comic">Pilih Mingguan</a>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-black/20 p-6 rounded-2xl border-2 border-dashed border-comic-yellow text-center max-w-2xl mx-auto">
+                <h4 class="font-bold text-xl mb-2 text-comic-yellow">🔥 Promo Mahasiswa!</h4>
+                <p>Tunjukkan Kartu Tanda Mahasiswa (KTM) aktif-mu dan dapatkan potongan 10% untuk semua item di hari kerja (Senin-Kamis).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-24 bg-comic-cyan border-b-4 comic-border border-black overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-heading font-black text-black text-center mb-16">KATA MEREKA TENTANG KAMI 🗣️</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mt-10">
+                <!-- Testimoni 1 -->
+                <div class="relative mt-8 reveal">
+                    <div class="bg-white p-6 rounded-2xl comic-border shadow-comic speech-bubble relative z-10">
+                        <div class="flex text-comic-yellow text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-800 font-medium text-sm leading-relaxed mb-4">"Gila sih, nyari Sony A7S III pas weekend pada full, cuma di VisualGear yang ready dan harganya masuk akal. Adminnya juga fast respon banget di WA!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 ml-4">
+                        <img src="https://placehold.co/100x100/FFD166/000000?text=A" alt="Avatar" class="w-12 h-12 rounded-full comic-border">
+                        <div>
+                            <p class="font-bold text-black leading-none">Andika P.</p>
+                            <p class="text-xs text-black font-medium">Videographer Freelance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="relative mt-8 lg:-mt-4 reveal">
+                    <div class="bg-white p-6 rounded-2xl comic-border shadow-comic speech-bubble relative z-10">
+                        <div class="flex text-comic-yellow text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-800 font-medium text-sm leading-relaxed mb-4">"Lensa-lensanya terawat banget, no jamur no fog. Kemarin sewa lensa GM buat prewed, hasilnya tajam parah. Thanks VisualGear, bakal jadi langganan."</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 ml-4">
+                        <img src="https://placehold.co/100x100/EF476F/ffffff?text=S" alt="Avatar" class="w-12 h-12 rounded-full comic-border">
+                        <div>
+                            <p class="font-bold text-black leading-none">Sisca W.</p>
+                            <p class="text-xs text-black font-medium">Wedding Photographer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="relative mt-8 reveal">
+                    <div class="bg-white p-6 rounded-2xl comic-border shadow-comic speech-bubble relative z-10">
+                        <div class="flex text-comic-yellow text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-800 font-medium text-sm leading-relaxed mb-4">"Nggak ribet syaratnya. Sebagai mahasiswa kadang susah cari rental yang percaya, tapi di sini asal dokumen lengkap langsung cair. Dapet diskon mahasiswa pula!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 ml-4">
+                        <img src="https://placehold.co/100x100/118AB2/ffffff?text=R" alt="Avatar" class="w-12 h-12 rounded-full comic-border">
+                        <div>
+                            <p class="font-bold text-black leading-none">Rizky M.</p>
+                            <p class="text-xs text-black font-medium">Mahasiswa Fikom</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 4 -->
+                <div class="relative mt-8 lg:-mt-4 reveal">
+                    <div class="bg-white p-6 rounded-2xl comic-border shadow-comic speech-bubble relative z-10">
+                        <div class="flex text-comic-yellow text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-800 font-medium text-sm leading-relaxed mb-4">"Sewa lighting Aputure sama gimbal DJI di sini buat syuting iklan. Alatnya bener-bener like new, baterai dikasih ekstra juga. Super recommended buat tim PH!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 ml-4">
+                        <img src="https://placehold.co/100x100/06D6A0/000000?text=B" alt="Avatar" class="w-12 h-12 rounded-full comic-border">
+                        <div>
+                            <p class="font-bold text-black leading-none">Bima Studio</p>
+                            <p class="text-xs text-black font-medium">Production House</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-b-4 comic-border border-black">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-heading font-black text-black text-center mb-12">PERTANYAAN UMUM (FAQ) ❓</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic reveal">
+                    <button class="faq-btn w-full text-left px-6 py-4 bg-comic-yellow font-bold text-lg flex justify-between items-center focus:outline-none">
+                        <span>Apa saja syarat menyewa di VisualGear?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white font-medium text-gray-700">
+                        <div class="px-6 py-4 border-t-4 border-black">
+                            Cukup sediakan 2 identitas asli yang masih berlaku (KTP, SIM, Kartu Mahasiswa, atau Paspor) dengan nama dan alamat yang sama. Untuk penyewa pertama, kami akan melakukan verifikasi data terlebih dahulu (max 30 menit).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic reveal">
+                    <button class="faq-btn w-full text-left px-6 py-4 bg-comic-pink text-white font-bold text-lg flex justify-between items-center focus:outline-none">
+                        <span>Apakah ada denda keterlambatan pengembalian?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white font-medium text-gray-700">
+                        <div class="px-6 py-4 border-t-4 border-black">
+                            Ya, toleransi keterlambatan adalah 1 jam. Lebih dari itu akan dikenakan denda sebesar 10% dari tarif sewa per jam, atau dihitung sewa 1 hari full jika terlambat lebih dari 5 jam. Mohon informasikan kepada admin jika terjadi kendala di jalan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic reveal">
+                    <button class="faq-btn w-full text-left px-6 py-4 bg-comic-cyan font-bold text-lg flex justify-between items-center focus:outline-none">
+                        <span>Apakah alat bisa diantar ke lokasi (delivery)?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white font-medium text-gray-700">
+                        <div class="px-6 py-4 border-t-4 border-black">
+                            Bisa! Kami menyediakan layanan pengantaran via kurir instan (Gojek/Grab) untuk wilayah Jakarta, namun ongkos kirim ditanggung oleh penyewa dan pembayaran sewa harus lunas di awal. Alat juga bisa di pick-up langsung ke store kami.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic reveal">
+                    <button class="faq-btn w-full text-left px-6 py-4 bg-comic-blue text-white font-bold text-lg flex justify-between items-center focus:outline-none">
+                        <span>Bagaimana jika alat rusak saat saya sewa?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white font-medium text-gray-700">
+                        <div class="px-6 py-4 border-t-4 border-black">
+                            Semua alat dicek bersama saat serah terima. Jika terjadi kerusakan akibat kelalaian penyewa (jatuh, masuk air, dll), maka penyewa wajib menanggung biaya servis di service center resmi serta biaya ganti rugi sewa selama alat diperbaiki. Harap jaga alat seperti milik sendiri.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-100 border-b-4 comic-border border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <div class="inline-block bg-black text-white px-4 py-1 rounded-full text-sm font-bold comic-border mb-4">MARKAS KAMI 📍</div>
+                    <h2 class="text-4xl md:text-5xl font-heading font-black text-black mb-6">MAMPIR KE STORE KAMI DI JAKARTA BARAT</h2>
+                    <p class="text-lg text-gray-700 font-medium mb-8">
+                        Silakan datang langsung untuk cek unit, nanya-nanya alat, atau ambil pesanan. Tempatnya cozy, parkir luas, dan adminnya ramah (beneran!).
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-comic-yellow w-12 h-12 rounded-xl comic-border shadow-comic flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-map-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Alamat Store:</h4>
+                                <p class="text-gray-600 font-medium">Jl. Raya Kebon Jeruk No. 123, RT.1/RW.2, Kebon Jeruk, Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-comic-cyan w-12 h-12 rounded-xl comic-border shadow-comic flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Jam Operasional:</h4>
+                                <p class="text-gray-600 font-medium">Senin - Minggu: 08.00 - 22.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.google.com" target="_blank" class="inline-block bg-comic-pink text-white font-heading font-bold text-lg px-8 py-4 rounded-xl comic-border shadow-comic btn-comic">
+                        <i class="fa-solid fa-location-arrow mr-2"></i> Buka di Google Maps
+                    </a>
+                </div>
+
+                <!-- Google Maps Embed Panel -->
+                <div class="bg-white p-2 rounded-2xl comic-border shadow-comic-lg h-[400px] w-full reveal">
+                    <!-- Embed Google Maps Real Area (Fix Error) -->
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Kebon%20Jeruk,%20Jakarta%20Barat&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white pt-20 border-t-8 border-comic-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
+                
+                <!-- Footer Brand -->
+                <div class="md:col-span-2">
+                    <img class="h-16 w-auto object-contain mb-6" src="gambarasset/logo.webp" alt="VisualGear Logo">
+                    <p class="text-gray-400 font-medium leading-relaxed max-w-sm mb-8">
+                        VisualGear adalah penyedia layanan rental kamera & peralatan produksi visual terlengkap dan terpercaya di Jakarta Barat. Solusi cerdas untuk hasilkan karya tanpa batas.
+                    </p>
+                    
+                    <h4 class="font-bold text-lg mb-4 text-comic-yellow">Hubungi Kami:</h4>
+                    <a href="https://wa.me/6289529605601" target="_blank" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-4 rounded-lg transition-colors comic-border">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>0895-2960-5601</span>
+                    </a>
+                </div>
+
+                <!-- Footer Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-2xl mb-6 text-comic-cyan border-b-2 border-gray-800 pb-2">Menu Cepat</h4>
+                    <ul class="space-y-3 font-medium text-gray-400">
+                        <li><a href="#profil" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="#katalog-kamera" class="hover:text-white transition-colors">Katalog Kamera</a></li>
+                        <li><a href="#katalog-alat" class="hover:text-white transition-colors">Perlengkapan Produksi</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Paket & Harga</a></li>
+                        <li><a href="#testimoni" class="hover:text-white transition-colors">Testimoni</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Socials -->
+                <div>
+                    <h4 class="font-heading font-bold text-2xl mb-6 text-comic-pink border-b-2 border-gray-800 pb-2">Ikuti Kami</h4>
+                    <p class="text-gray-400 font-medium mb-4">Update promo dan behind the scenes di sosmed kita!</p>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://www.instagram.com/solusilokal.id/" target="_blank" class="flex items-center gap-3 bg-gray-800 hover:bg-comic-pink text-white p-3 rounded-xl transition-colors comic-border group">
+                            <i class="fa-brands fa-instagram text-2xl group-hover:scale-110 transition-transform"></i>
+                            <span class="font-bold">Instagram</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@solusilokal.id" target="_blank" class="flex items-center gap-3 bg-gray-800 hover:bg-black hover:text-white text-white p-3 rounded-xl transition-colors comic-border border-gray-700 group">
+                            <i class="fa-brands fa-tiktok text-2xl group-hover:scale-110 transition-transform"></i>
+                            <span class="font-bold">TikTok</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright & Credit Full Width -->
+        <div class="border-t border-gray-800 w-full bg-black">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 font-medium text-sm text-center md:text-left">
+                    &copy; 2026 VisualGear Rental Kamera. All rights reserved.
+                </p>
+                <p class="text-gray-500 font-medium text-sm">
+                    Developed by <a href="https://www.solusilokal.id/" target="_blank" class="text-comic-cyan hover:text-white font-bold transition-colors">SolusiLokal</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                
+                // Ganti icon
+                const icon = mobileMenuBtn.querySelector('i');
+                if(mobileMenu.classList.contains('hidden')){
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // FAQ Accordion Logic
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('i');
+                    
+                    // Cek jika yang di klik sudah terbuka
+                    if (content.classList.contains('open')) {
+                        content.classList.remove('open');
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        // Tutup semua faq lainnya terlebih dahulu
+                        faqButtons.forEach(otherBtn => {
+                            if (otherBtn !== button) {
+                                otherBtn.nextElementSibling.classList.remove('open');
+                                otherBtn.querySelector('i').classList.remove('rotate-180');
+                            }
+                        });
+
+                        // Buka faq saat ini
+                        content.classList.add('open');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // Scroll Reveal Animation (Animasi Hentak Muncul saat discroll)
+            const reveals = document.querySelectorAll('.reveal');
+            
+            if('IntersectionObserver' in window) {
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if(entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            // Uncomment kode di bawah ini jika ingin animasi hanya jalan 1x (tidak mengulang saat discroll ke atas)
+                            // observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    root: null,
+                    threshold: 0.1, // Trigger saat 10% elemen sudah masuk layar
+                    rootMargin: "0px 0px -50px 0px"
+                });
+
+                reveals.forEach(reveal => {
+                    revealObserver.observe(reveal);
+                });
+            } else {
+                // Fallback untuk browser lawas yang tidak support IntersectionObserver
+                reveals.forEach(reveal => reveal.classList.add('active'));
+            }
+
+            // Smooth scrolling for anchor links (fallback untuk safari jika scroll-behavior css belum disupport sempurna)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement){
+                        e.preventDefault();
+                        // Hide mobile menu if open
+                        if(!mobileMenu.classList.contains('hidden')){
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuBtn.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+                        }
+                        
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
