@@ -15,7 +15,7 @@
     <meta property="og:description" content="Sewa perlengkapan visual terbaik untuk project Anda. Harga terjangkau, kualitas pro. Cek katalog kami sekarang!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.visualgear.com">
-    <meta property="og:image" content="https://raw.githubusercontent.com/solusilokal/demo-rental-kamera/refs/heads/main/gambarasset/gambarSEO.webp">
+    <meta property="og:image" content="https://placehold.co/1200x630/FFD166/000000?text=VisualGear+Rental+Kamera">
 
     <!-- Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) untuk perpaduan Modern, Clean & Energik -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,6 +133,16 @@
         html {
             scroll-behavior: smooth;
         }
+        
+        /* Animasi Pop-up untuk card (menambahkan animasi pada hover seperti pada bagian lain) */
+        .pop-up-hover {
+             transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+        
+        .pop-up-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 12px 12px 0px 0px rgba(0,0,0,1);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased overflow-x-hidden">
@@ -245,24 +255,24 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-comic-cyan p-8 rounded-2xl comic-border shadow-comic text-center transform hover:-translate-y-2 transition-transform reveal">
+                <!-- Feature 1 - Added pop-up-hover class -->
+                <div class="bg-comic-cyan p-8 rounded-2xl comic-border shadow-comic text-center pop-up-hover">
                     <div class="bg-white w-20 h-20 mx-auto rounded-full comic-border flex items-center justify-center mb-6 shadow-comic">
                         <i class="fa-solid fa-camera-rotate text-3xl text-black"></i>
                     </div>
                     <h3 class="text-2xl font-heading font-bold mb-3">Unit Selalu Prima</h3>
                     <p class="font-medium text-black">Setiap kamera dan lensa dicek ketat sebelum dan sesudah disewa. Sensor bersih, lensa tajam!</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-comic-pink p-8 rounded-2xl comic-border shadow-comic text-center transform hover:-translate-y-2 transition-transform reveal">
+                <!-- Feature 2 - Added pop-up-hover class -->
+                <div class="bg-comic-pink p-8 rounded-2xl comic-border shadow-comic text-center pop-up-hover">
                     <div class="bg-white w-20 h-20 mx-auto rounded-full comic-border flex items-center justify-center mb-6 shadow-comic">
                         <i class="fa-solid fa-money-bill-wave text-3xl text-black"></i>
                     </div>
                     <h3 class="text-2xl font-heading font-bold mb-3">Harga Bersahabat</h3>
                     <p class="font-medium text-black text-white">Tarif sewa kompetitif untuk mahasiswa, freelancer, hingga production house besar.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-comic-blue p-8 rounded-2xl comic-border shadow-comic text-center transform hover:-translate-y-2 transition-transform reveal">
+                <!-- Feature 3 - Added pop-up-hover class -->
+                <div class="bg-comic-blue p-8 rounded-2xl comic-border shadow-comic text-center pop-up-hover">
                     <div class="bg-white w-20 h-20 mx-auto rounded-full comic-border flex items-center justify-center mb-6 shadow-comic">
                         <i class="fa-solid fa-bolt text-3xl text-black"></i>
                     </div>
@@ -287,8 +297,8 @@
 
             <!-- 5 Slot Grid: 3 top, 2 bottom centered using Flex/Grid combo -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 1. Mirrorless -->
-                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-yellow transition-colors reveal">
+                <!-- 1. Mirrorless - Added pop-up-hover class -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-yellow transition-colors pop-up-hover">
                     <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
                         <img src="gambarasset/kamera1.webp" alt="Kamera Mirrorless" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
                     </div>
@@ -297,8 +307,8 @@
                     <p class="font-bold text-lg border-t-2 border-black pt-4">Mulai <span class="text-comic-pink group-hover:text-red-600">Rp 150.000</span> / hari</p>
                 </div>
 
-                <!-- 2. DSLR -->
-                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-cyan transition-colors reveal">
+                <!-- 2. DSLR - Added pop-up-hover class -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-cyan transition-colors pop-up-hover">
                     <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
                         <img src="gambarasset/kamera2.webp" alt="Kamera DSLR" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
                     </div>
@@ -307,8 +317,8 @@
                     <p class="font-bold text-lg border-t-2 border-black pt-4">Mulai <span class="text-comic-pink group-hover:text-black">Rp 100.000</span> / hari</p>
                 </div>
 
-                <!-- 3. Action Camera -->
-                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-pink transition-colors text-black reveal">
+                <!-- 3. Action Camera - Added pop-up-hover class -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-pink transition-colors text-black pop-up-hover">
                     <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
                         <img src="gambarasset/kamera3.webp" alt="Action Camera" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
                     </div>
@@ -320,8 +330,8 @@
 
             <!-- Bottom Row (2 Slots Centered) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
-                <!-- 4. Video Camera -->
-                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-blue transition-colors reveal">
+                <!-- 4. Video Camera - Added pop-up-hover class -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-comic-blue transition-colors pop-up-hover">
                     <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
                         <img src="gambarasset/kamera4.webp" alt="Kamera Video Cinema" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
                     </div>
@@ -330,8 +340,8 @@
                     <p class="font-bold text-lg border-t-2 border-black pt-4 group-hover:text-white">Mulai <span class="text-comic-pink">Rp 300.000</span> / hari</p>
                 </div>
 
-                <!-- 5. Kamera Lainnya (Drone/Analog) -->
-                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-black transition-colors reveal">
+                <!-- 5. Kamera Lainnya (Drone/Analog) - Added pop-up-hover class -->
+                <div class="bg-white rounded-2xl p-6 comic-border shadow-comic group hover:bg-black transition-colors pop-up-hover">
                     <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-xl comic-border">
                         <img src="gambarasset/kamera5.webp" alt="Drone dan Analog" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
                     </div>
@@ -356,7 +366,7 @@
             <!-- 4 Slot Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- 1. Lensa -->
-                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105 reveal">
+                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="absolute top-0 right-0 bg-comic-yellow border-l-4 border-b-4 border-black p-2 font-bold z-10">#1</div>
                     <img src="gambarasset/perlengkapan1.webp" alt="Lensa Kamera" class="w-full h-48 object-cover border-2 border-black rounded-lg mb-4">
                     <h3 class="text-xl font-heading font-bold mb-1">Lensa (Lens)</h3>
@@ -364,7 +374,7 @@
                 </div>
 
                 <!-- 2. Tripod & Gimbal -->
-                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105 reveal">
+                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="absolute top-0 right-0 bg-comic-cyan border-l-4 border-b-4 border-black p-2 font-bold z-10">#2</div>
                     <img src="gambarasset/perlengkapan2.webp" alt="Gimbal dan Tripod" class="w-full h-48 object-cover border-2 border-black rounded-lg mb-4">
                     <h3 class="text-xl font-heading font-bold mb-1">Stabilizer & Tripod</h3>
@@ -372,7 +382,7 @@
                 </div>
 
                 <!-- 3. Lighting & Flash -->
-                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105 reveal">
+                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="absolute top-0 right-0 bg-comic-pink text-white border-l-4 border-b-4 border-black p-2 font-bold z-10">#3</div>
                     <img src="gambarasset/perlengkapan3.webp" alt="Lighting and Flash" class="w-full h-48 object-cover border-2 border-black rounded-lg mb-4">
                     <h3 class="text-xl font-heading font-bold mb-1">Lighting & Flash</h3>
@@ -380,7 +390,7 @@
                 </div>
 
                 <!-- 4. Audio & Mic -->
-                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105 reveal">
+                <div class="bg-white border-4 border-black p-4 rounded-xl shadow-comic relative overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="absolute top-0 right-0 bg-comic-blue text-white border-l-4 border-b-4 border-black p-2 font-bold z-10">#4</div>
                     <img src="gambarasset/perlengkapan4.webp" alt="Microphone dan Audio" class="w-full h-48 object-cover border-2 border-black rounded-lg mb-4">
                     <h3 class="text-xl font-heading font-bold mb-1">Audio & Mic</h3>
@@ -388,7 +398,7 @@
                 </div>
             </div>
             
-            <div class="mt-12 text-center reveal">
+            <div class="mt-12 text-center">
                 <a href="https://wa.me/6289529605601" class="inline-block bg-black text-white font-heading font-bold text-xl px-10 py-4 rounded-xl comic-border shadow-comic btn-comic hover:text-comic-cyan">
                     <i class="fa-solid fa-list mr-2"></i> Minta Pricelist Lengkap PDF
                 </a>
@@ -405,7 +415,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Paket 12 Jam -->
-                <div class="bg-white text-black rounded-2xl comic-border shadow-comic-lg p-8 transition-transform duration-300 hover:-translate-y-3 reveal">
+                <div class="bg-white text-black rounded-2xl comic-border shadow-comic-lg p-8 transition-transform duration-300 hover:-translate-y-3">
                     <div class="bg-comic-blue text-white font-bold inline-block px-4 py-1 rounded-full text-sm mb-4 comic-border">Quicky</div>
                     <h3 class="text-3xl font-heading font-black mb-2">12 Jam</h3>
                     <p class="text-gray-600 font-medium mb-6">Cocok buat syuting kilat, event singkat, atau tugas kampus dadakan.</p>
@@ -418,7 +428,7 @@
                 </div>
 
                 <!-- Paket 24 Jam (Highlight) -->
-                <div class="bg-comic-yellow text-black rounded-2xl comic-border shadow-comic-lg p-8 relative z-10 transition-transform duration-300 hover:-translate-y-3 reveal">
+                <div class="bg-comic-yellow text-black rounded-2xl comic-border shadow-comic-lg p-8 relative z-10 transition-transform duration-300 hover:-translate-y-3">
                     <div class="absolute -top-4 -right-4 bg-comic-pink text-white font-bold py-1 px-3 rounded-lg comic-border transform rotate-6">MOST POPULAR!</div>
                     <div class="bg-black text-white font-bold inline-block px-4 py-1 rounded-full text-sm mb-4 comic-border">Standard</div>
                     <h3 class="text-3xl font-heading font-black mb-2">24 Jam</h3>
@@ -432,7 +442,7 @@
                 </div>
 
                 <!-- Paket Mingguan -->
-                <div class="bg-white text-black rounded-2xl comic-border shadow-comic-lg p-8 transition-transform duration-300 hover:-translate-y-3 reveal">
+                <div class="bg-white text-black rounded-2xl comic-border shadow-comic-lg p-8 transition-transform duration-300 hover:-translate-y-3">
                     <div class="bg-comic-cyan text-black font-bold inline-block px-4 py-1 rounded-full text-sm mb-4 comic-border">Marathon</div>
                     <h3 class="text-3xl font-heading font-black mb-2">Mingguan (7 Hari)</h3>
                     <p class="text-gray-600 font-medium mb-6">Sewa 7 hari, bayar cuma 5 hari! Untuk short movie atau trip ke luar kota.</p>
@@ -458,7 +468,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mt-10">
                 <!-- Testimoni 1 -->
-                <div class="relative mt-8 reveal">
+                <div class="relative mt-8">
                     <div class="bg-white p-6 rounded-2xl comic-border shadow-comic speech-bubble relative z-10">
                         <div class="flex text-comic-yellow text-sm mb-3">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -475,7 +485,7 @@
                 </div>
 
                 <!-- Testimoni 2 -->
-                <div class="relative mt-8 lg:-mt-4 reveal">
+                <div class="relative mt-8 lg:-mt-4">
                     <div class="bg-white p-6 rounded-2xl comic-border shadow-comic speech-bubble relative z-10">
                         <div class="flex text-comic-yellow text-sm mb-3">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -492,7 +502,7 @@
                 </div>
 
                 <!-- Testimoni 3 -->
-                <div class="relative mt-8 reveal">
+                <div class="relative mt-8">
                     <div class="bg-white p-6 rounded-2xl comic-border shadow-comic speech-bubble relative z-10">
                         <div class="flex text-comic-yellow text-sm mb-3">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -509,7 +519,7 @@
                 </div>
 
                 <!-- Testimoni 4 -->
-                <div class="relative mt-8 lg:-mt-4 reveal">
+                <div class="relative mt-8 lg:-mt-4">
                     <div class="bg-white p-6 rounded-2xl comic-border shadow-comic speech-bubble relative z-10">
                         <div class="flex text-comic-yellow text-sm mb-3">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -534,7 +544,7 @@
             
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic reveal">
+                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic">
                     <button class="faq-btn w-full text-left px-6 py-4 bg-comic-yellow font-bold text-lg flex justify-between items-center focus:outline-none">
                         <span>Apa saja syarat menyewa di VisualGear?</span>
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
@@ -547,7 +557,7 @@
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic reveal">
+                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic">
                     <button class="faq-btn w-full text-left px-6 py-4 bg-comic-pink text-white font-bold text-lg flex justify-between items-center focus:outline-none">
                         <span>Apakah ada denda keterlambatan pengembalian?</span>
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
@@ -560,7 +570,7 @@
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic reveal">
+                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic">
                     <button class="faq-btn w-full text-left px-6 py-4 bg-comic-cyan font-bold text-lg flex justify-between items-center focus:outline-none">
                         <span>Apakah alat bisa diantar ke lokasi (delivery)?</span>
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
@@ -573,7 +583,7 @@
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic reveal">
+                <div class="border-4 border-black rounded-xl overflow-hidden shadow-comic">
                     <button class="faq-btn w-full text-left px-6 py-4 bg-comic-blue text-white font-bold text-lg flex justify-between items-center focus:outline-none">
                         <span>Bagaimana jika alat rusak saat saya sewa?</span>
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
@@ -626,7 +636,7 @@
                 </div>
 
                 <!-- Google Maps Embed Panel -->
-                <div class="bg-white p-2 rounded-2xl comic-border shadow-comic-lg h-[400px] w-full reveal">
+                <div class="bg-white p-2 rounded-2xl comic-border shadow-comic-lg h-[400px] w-full">
                     <!-- Embed Google Maps Real Area (Fix Error) -->
                     <iframe 
                         src="https://maps.google.com/maps?q=Kebon%20Jeruk,%20Jakarta%20Barat&t=&z=14&ie=UTF8&iwloc=&output=embed" 
